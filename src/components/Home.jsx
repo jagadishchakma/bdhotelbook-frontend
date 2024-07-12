@@ -17,7 +17,7 @@ const Home = () => {
             <div className="col-md-3" key={item.id} >
                 <Link to={`hotels/${item.slug}`}>
                     <div className="district">
-                        <img src={`http://127.0.0.1:8000${item.image}`} alt="" width="100%" />
+                        <img src={item.image} alt="" width="100%" />
                         <span>{item.name}</span>
                     </div>
                 </Link>
