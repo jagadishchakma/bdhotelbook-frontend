@@ -24,7 +24,7 @@ const BookedHistory = () => {
 
     return (
         <>
-            <h1>Active Room Booked</h1>
+            <h1>Room Booked History </h1>
             <div className="row">
                 {
                     rooms.length > 0 && rooms.map((room, id) => (
