@@ -49,7 +49,7 @@ const AuthProvider = ({ children }) => {
 
   //logout
   const logout = async () => {
-    await authapi.post('account/logout/');
+    const response = await authapi.post('account/logout/');
     localStorage.removeItem('token');
     localStorage.removeItem('user_id');
     setUser(null);
