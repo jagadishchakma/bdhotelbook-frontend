@@ -1,0 +1,242 @@
+.formcontrol{
+  width:50%;
+  margin:auto
+}
+.invalid-feedback{
+  display: block !important;
+}
+fieldset{
+  border: 1px solid rgb(171, 169, 169);
+  padding: 20px
+}
+legend{
+  width: 190px;
+  float: none;
+}
+#togglePassword{
+  cursor: pointer;
+  float: right;
+  margin-top: -40px;
+  margin-right: 10px;
+}
+
+.district{
+  position: relative;
+}
+.district:hover{
+  opacity: 0.7;
+}
+.district span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-weight: bold;
+  background-color: #1f611c;
+  padding: 5px;
+}
+.hotel-card{
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 40px;
+}
+.hotel-card .col-md-4{
+  padding-left: 0;
+}
+#detail-pic{
+  position: relative;
+}
+#more-pic{
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  width: 100px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.room-features{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.rooms{
+  margin-top: 100px
+}
+.title{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.overview{
+  color: gray;
+  font-family:'Times New Roman', Times, serif
+}
+.caption{
+  margin-top: 50px
+}
+.balance{
+  color: gray;
+}
+.invalid-feedback{
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: red;
+}
+.valid-feedback{
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: green;
+  display: block
+}
+.reviews{
+  margin-top: 100px;
+}
+.rating-star{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.rating-star li{
+  margin-left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.rating-star li:first-child{
+  margin-left:0
+}
+#comment-box{
+  width: 300px;
+  height: 100px;
+}
+.star-color{
+  color: rgb(156, 77, 77);
+}
+.review-card{
+  width: 18rem;
+  margin-top: 20px;
+}
+#edit-comment-box{
+  width: 100%;
+}
+#edit-comment-box:focus{
+  border: 0;
+}
+#profile-image{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.dropdown-menu{
+  left: -12px !important
+}
+.profile-bar{
+  width: 300px;
+}
+.profile-bar img{
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+.profile-edit-bar{
+  border: 1px solid rgb(220, 220, 220);
+  padding: 20px;
+  border-radius: 10px;
+}
+.profile-container{
+  margin-top: 50px
+}
+.sub-profile{
+  border: 1px solid rgb(220, 220, 220);
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.active-nav{
+  border: 2px solid black !important
+}
+
+.pass-change{
+  color: rgb(50, 214, 255);
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+.profile-image{
+  display: block;
+  width: 200px;
+  height: 220px;
+  margin:auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.profile-image:hover>.change-photo{
+  display: block;
+}
+.change-photo{
+  display: none;
+  width: 200px;
+  height: 30px;
+  position: absolute;
+  background-color: #1f611c;
+  text-align: center;
+  bottom: 80px;
+  cursor: pointer;
+  color: white
+}
+
+.district-nav{
+  width: 200px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+#district-nav-active{
+  border: 2px solid gray;
+  color: black;
+}
+.no-results{
+  width: 200px;
+  font-size: 25px;
+  color: #c08989;
+  margin: 20px;
+}
+.main{
+  min-height: 500px;
+}
+.footer ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+.footer ul li{
+  color:rgb(29, 166, 201)
+}
+
+.review-img{
+  width: 70px;
+  height: 80px;
+  border-radius: 50%;
+}
+.review-date{
+  color: gray;
+  font-style: italic;
+}
+#birth-date .form-floating>label{
+  left: 10px;
+}
+.reviews{
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 5px;
+}
