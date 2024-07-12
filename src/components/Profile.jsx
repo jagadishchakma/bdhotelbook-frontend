@@ -58,9 +58,8 @@ const Profile = () => {
 
         try {
             authapi.post('account/pass_change/', { old_pass: oldPassword, new_pass: newPassword })
-             // logout()
+             logout()
              setLoading(false)
-             console.log(response)
         } catch (error) {
             setErrors({ old_pass: false, new_pass: 'Please provide a strong password', confirm_pass: false })
             setLoading(false)
