@@ -26,6 +26,7 @@ const Profile = () => {
     })
 
     //redirect unauthenticated user
+    if(!localStorage.getItem('token')) window.location.href="/account/login"
     const { user, logout, setReloadUser, reloadUser, finished } = useContext(AuthContext);
     if(finished){
         if(user==null) window.location.href = '/account/login';
