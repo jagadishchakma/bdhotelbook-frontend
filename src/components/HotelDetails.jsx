@@ -73,7 +73,7 @@ const HotelDetails = () => {
 
                         {
                             hotel && hotel.images.length >= 6 ? (
-                                <span className="badge rounded-pill text-bg-success" id="more-pic"><i className="bi bi-images"></i> 5+</span>
+                                <span className="badge rounded-pill text-bg-success" id="more-pic"><i className="bi bi-images"></i> {hotel.image.length-1}+</span>
                             ) : (
                                 ""
                             )
