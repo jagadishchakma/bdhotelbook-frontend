@@ -1,0 +1,41 @@
+.reviews-headline{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.review-card{
+    background-color: white;
+    margin-top: 20px;
+}
+.review-card{
+    border: none;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.review-card .card-body{
+    background-color: #e5e5e5;
+}
+.review-form{
+    width: 500px;
+    margin: auto;
+    background-color: white;
+    margin-top: 50PX;
+    margin-bottom: 50PX;
+    padding: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.review-holder{
+    padding-bottom: 50px;
+}
+.review-card .card-header{
+    border: none;
+}
+.review-card .card-footer{
+    border: none;
+}
+.reviewer-info p{
+    margin: 0;
+    padding: 0;
+}

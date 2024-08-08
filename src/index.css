@@ -64,15 +64,31 @@ legend{
 .rooms{
   margin-top: 100px
 }
+.room_price{
+  color: #790000;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
 .title{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
-.overview{
-  color: gray;
-  font-family:'Times New Roman', Times, serif
+.headline{
+  border: 2px solid green;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
+
+
+
 .caption{
-  margin-top: 50px
+  margin-top: 50px;
+  font-weight: bold;
 }
 .balance{
   color: gray;
@@ -88,9 +104,7 @@ legend{
   color: green;
   display: block
 }
-.reviews{
-  margin-top: 100px;
-}
+
 .rating-star{
   list-style-type: none;
   margin: 0;
@@ -111,10 +125,7 @@ legend{
 .star-color{
   color: rgb(156, 77, 77);
 }
-.review-card{
-  width: 18rem;
-  margin-top: 20px;
-}
+
 #edit-comment-box{
   width: 100%;
 }
@@ -236,7 +247,32 @@ legend{
   left: 10px;
 }
 .reviews{
-  background-color: #f3f3f3;
+  background-color: #e5e5e5;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
+}
+
+.hotel-images,.hotel-image{
+  cursor: pointer;
+}
+
+.loader{
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}
+.price{
+  color: #0d7190;
+}
+
+.single-image{
+  overflow: hidden;
+}
+.close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+  font-size: 40px;
+  background-color: white;
 }

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../utility/AuthContext';
 import api, { authapi } from '../utility/api';
 import { format } from 'date-fns';
+import '../assets/css/review.css';
 
 
 const HotelReviews = ({ slug, hotel }) => {
@@ -26,7 +27,7 @@ const HotelReviews = ({ slug, hotel }) => {
         }
         reviewsGet()
     }, [reload])
-    const { user, setReloadUser, reloadUser} = useContext(AuthContext);
+    const { user, setReloadUser, reloadUser } = useContext(AuthContext);
 
     const DateDisplay = (createdAt) => {
         const date = new Date(createdAt);
@@ -114,30 +115,31 @@ const HotelReviews = ({ slug, hotel }) => {
             star5: false,
         })
         setReload(reload + 1);
-        setReloadUser(reloadUser+1);
+        setReloadUser(reloadUser + 1);
     }
     //delete review
     const reviewDelete = async (id) => {
         const response = await authapi.delete(`hotel/reviews/${id}/`);
         setReload(reload + 1);
-        setReloadUser(reloadUser+1);
+        setReloadUser(reloadUser + 1);
     }
 
     //update review
     const reviewUpdate = async (id) => {
         const response = await authapi.put(`hotel/reviews/${id}/`, { rating, comment: updateComment });
         setReload(reload + 1);
-        setReloadUser(reloadUser+1);
+        setReloadUser(reloadUser + 1);
     }
     return (
-        <div className={isStayed?"reviews": reviews.length > 0?"reviews":""}>
-            {isStayed ? <hr /> : reviews && reviews.length > 0 ? <hr /> : ''}
-            {
-                isStayed && (
+        <div>
+            {(reviews.length > 0 || isStayed) ? <h2 className="text-center reviews-headline headline">Reviews({reviews.length})</h2> : ""}
+            <div className={isStayed ? "reviews" : reviews.length > 0 ? "reviews" : ""}>
+                {
+                    isStayed && (
 
-                    <>
-                        <h6>Write a review:</h6>
+
                         <div className="review-form">
+                            <h6>Write a review:</h6>
                             <ul className="d-flex justify-content-start align-items-center rating-star">
                                 <li className={rating.star1 ? "star-color" : ""}><i className="bi bi-star-fill" onClick={() => starHandler('star1')}></i></li>
                                 <li className={rating.star2 ? "star-color" : ""}><i className="bi bi-star-fill" onClick={() => starHandler('star2')}></i></li>
@@ -146,47 +148,46 @@ const HotelReviews = ({ slug, hotel }) => {
                                 <li className={rating.star5 ? "star-color" : ""}><i className="bi bi-star-fill" onClick={() => starHandler('star5')}></i></li>
                             </ul>
                             <div>
-                                <textarea id="comment-box" value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
+                                <textarea className="form-control" id="comment-box" value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
+                                <input type="submit" value="Submit" className="btn btn-danger mt-2" onClick={reviewPost} />
                             </div>
-                            <div>
-                                <input type="submit" value="Submit" className="btn btn-warning" onClick={reviewPost} />
-                            </div>
+                            
                         </div>
-                    </>
-                )
-            }
 
-            <div>
-                
-                {
-                    reviews && reviews.map((review) => (
-                        <div className="card review-card" key={review.id}>
-                            <div className="card-header d-flex gap-3">
-                                <div>
-                                    <img src={review.user.profile.image} alt={review.user.username} className="review-img" />
+                    )
+                }
+
+                <div className="review-holder">
+
+                    {
+                        reviews && reviews.map((review) => (
+                            <div className="card review-card shadow-sm" key={review.id}>
+                                <div className="card-header d-flex gap-3">
+                                    <div>
+                                        <img src={review.user.profile.image} alt={review.user.username} className="review-img" />
+                                    </div>
+                                    <div className="reviewer-info">
+                                        <p className="card-title">{review.user.username}</p>
+                                        <ul className="d-flex justify-content-start align-items-center rating-star">
+                                            {loadRating(review.rating)}
+                                        </ul>
+                                        <p className="review-date fs-6">{DateDisplay(review.created_at)}</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className="card-title">{review.user.username}</p>
-                                    <ul className="d-flex justify-content-start align-items-center rating-star">
-                                        {loadRating(review.rating)}
-                                    </ul>
-                                    <p className="review-date fs-6">{DateDisplay(review.created_at)}</p>
+                                <div className={(editMode.id == review.id && editMode.edit == true) ? "card-body-edit" : "card-body"}>
+                                    {
+                                        (editMode.id == review.id && editMode.edit == true) ? (
+                                            <textarea id="edit-comment-box" value={updateComment} onChange={(e) => setUpdateComment(e.target.value)}></textarea>
+                                        ) : (
+                                            <p>{review.comment}</p>
+                                        )
+                                    }
+
                                 </div>
-                            </div>
-                            <div className={(editMode.id == review.id && editMode.edit == true) ? "card-body-edit" : "card-body"}>
+
                                 {
                                     (editMode.id == review.id && editMode.edit == true) ? (
-                                        <textarea id="edit-comment-box" value={updateComment} onChange={(e) => setUpdateComment(e.target.value)}></textarea>
-                                    ) : (
-                                        <p>{review.comment}</p>
-                                    )
-                                }
-
-                            </div>
-                            <div className="card-footer">
-                                {
-                                    (editMode.id == review.id && editMode.edit == true) ? (
-                                        <>
+                                        <div className="card-footer">
                                             <button className="btn btn-outline-info" onClick={() => {
                                                 reviewUpdate(review.id)
                                                 setEditMode({ id: review.id, edit: false })
@@ -198,25 +199,25 @@ const HotelReviews = ({ slug, hotel }) => {
                                                 setUpdateComment('')
                                                 setRating(0)
                                             }}>Cancel</button>
-                                        </>
+                                        </div>
                                     ) : user && user.username == review.user.username ? (
-                                        <>
+                                        <div className="card-footer">
                                             <button className="btn btn-outline-info" onClick={() => {
                                                 setEditMode({ id: review.id, edit: true })
                                                 setUpdateComment(review.comment)
                                                 setRating(review.rating)
                                             }}>Edit</button>
                                             <button className="btn btn-outline-danger ms-3" onClick={() => reviewDelete(review.id)}>Delete</button>
-                                        </>
+                                        </div>
                                     ) : ""
                                 }
 
-                            </div>
-                        </div>
-                    ))
-                }
-            </div>
 
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
         </div>
     );
 };

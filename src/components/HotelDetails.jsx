@@ -4,11 +4,14 @@ import api, { authapi } from '../utility/api';
 import { Helmet } from 'react-helmet';
 import HotelReviews from './HotelReviews';
 import { AuthContext } from '../utility/AuthContext';
+import ShowImage from './ShowImage';
+
 
 const HotelDetails = () => {
     const [hotel, setHotel] = useState('');
     const [loading, setLoading] = useState(false);
     const [room_id, setRoomId] = useState(0);
+    const [image,setImage] = useState('');
     const { district, slug } = useParams();
     const { user } = useContext(AuthContext);
 
@@ -41,6 +44,7 @@ const HotelDetails = () => {
         }
     }
     let bookedMatch = false;
+  
 
     return (
         <div className="container mt-5 main mb-5">
@@ -49,7 +53,7 @@ const HotelDetails = () => {
                 <meta name="description" content="This is the home page description." />
                 <meta name="keywords" content="hotel-booking, bangaldesh hotel tourist, hotel book" />
             </Helmet>
-            <div className="row">
+            <div className="row hotel-images" data-bs-toggle="modal" data-bs-target="#imagesShowModal">
                 <div className="col-md-6">
                     <img src={hotel && hotel.images[0].image} alt={hotel && hotel.images[0].name} width="100%" />
                 </div>
@@ -73,7 +77,7 @@ const HotelDetails = () => {
 
                         {
                             hotel && hotel.images.length >= 6 ? (
-                                <span className="badge rounded-pill text-bg-success" id="more-pic"><i className="bi bi-images"></i> {hotel.image.length-1}+</span>
+                                <span className="badge rounded-pill text-bg-success" id="more-pic"><i className="bi bi-images"></i> {(hotel.images.length) - 1}+</span>
                             ) : (
                                 ""
                             )
@@ -84,12 +88,22 @@ const HotelDetails = () => {
             <div className="overview">
                 <h3 className="title">{hotel && hotel.name}</h3>
                 <span>{hotel && hotel.district.name}</span>
-                <p className="caption">Overview</p>
 
-                <p className="address">{hotel && hotel.address}</p>
-                <p className="description">{hotel && hotel.description}</p>
-                <p className="distance">{hotel && hotel.distance}</p>
+
+                <p className="address"><strong>Address: </strong>{hotel && hotel.address}</p>
+                <p className="description"><strong>Description: </strong>{hotel && hotel.description}</p>
+                <p className="distance"><strong>Distance: </strong>{hotel && hotel.distance}</p>
+                <p className="distance"><strong>District: </strong>{hotel && hotel.district}</p>
+                <p className="distance"><strong>Advantages: </strong></p>
+                <ul>
+                    {
+                        hotel && hotel.advantage.map((item, index) => (
+                            <li>{item.name}</li>
+                        ))
+                    }
+                </ul>
             </div>
+            <h2 className="text-center headline">Rooms({hotel && hotel.rooms.length})</h2>
             <div className="rooms row">
                 {
                     hotel && hotel.rooms.map((room) => (
@@ -132,25 +146,25 @@ const HotelDetails = () => {
                                         <li><i className="bi bi-wifi"></i> Wifi: {room.room_wifi ? 'YES' : 'NO'}</li>
                                     </ul>
 
-
                                 </div>
 
-                                <div className="card-footer text-muted d-flex justify-content-between">
+                                <div className="card-footer text-muted">
+                                    <p className="room_price">Price: TK. {room.room_price} per night</p>
                                     {
                                         user && user.profile.room_booked.map((user_room) => (
-                                            user_room.room[0].slug == room.slug && room.room_booked? bookedMatch = true:bookedMatch = false
+                                            user_room.room[0].slug == room.slug && room.room_booked ? bookedMatch = true : bookedMatch = false
                                         ))
                                     }
                                     {
-                                        bookedMatch?(
+                                        bookedMatch ? (
                                             <>
-                                                <button className="btn btn-primary" disabled>You Booked</button>
+                                                <button className="btn btn-success" disabled>You Booked</button>
                                             </>
-                                        ) : room.room_booked?(
+                                        ) : user && room.room_booked ? (
                                             <>
-                                                <button className="btn btn-primary" disabled>Unavailable</button>
+                                                <button className="btn btn-success" disabled>Unavailable</button>
                                             </>
-                                        ):(
+                                        ) : user && user ? (
                                             <>
                                                 {
                                                     loading && room_id == room.id ? (
@@ -159,24 +173,46 @@ const HotelDetails = () => {
                                                             <span role="status">Loading...</span>
                                                         </>
                                                     ) : (
-                                                        <button className="btn btn-primary" onClick={() => HotelBookingHandler(room.slug, room.room_price, room.id)}>Book Now</button>
+                                                        <button className="btn btn-success" onClick={() => HotelBookingHandler(room.slug, room.room_price, room.id)}>Book Now</button>
                                                     )
                                                 }
                                             </>
-                                        )
+                                        ) : ""
                                     }
 
-                                    <p className="card-text price"> <strong>TK. {room.room_price}/</strong></p>
                                 </div>
                             </div>
                         </div>
                     ))
                 }
+            </div>
+            <HotelReviews slug={slug} hotel={hotel} />
+            {/* multiple images show modal */}
+            <div className="imagesShowModal">
+                <div className="modal fade" id="imagesShowModal" tabIndex="-1" aria-labelledby="imagesShowModalLabel" aria-hidden="true">
+                    <div className="modal-dialog modal-xl">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div className="modal-body">
+                                <div className="row">
+                                    {
+                                        hotel && hotel.images.map((item) => (
+                                            <div className="col-md-3" key={item.id}>
+                                                <img className="hotel-image" src={item.image} alt={item.name} width="100%" onClick={() => setImage(item.image)} data-bs-toggle="modal" data-bs-target="#imageShowModal" />
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            </div>
-            <div>
-                <HotelReviews slug={slug} hotel={hotel} />
-            </div>
+            {/* single images show modal */}
+            <ShowImage image={image}/>
         </div>
     );
 };
