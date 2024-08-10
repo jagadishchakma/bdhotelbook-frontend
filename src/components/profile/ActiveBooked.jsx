@@ -23,7 +23,7 @@ const ActiveBooked = () => {
     };
     return (
         <>
-            <h1>Active Room Booked</h1>
+            <h2 className="text-success">Active Room Booked</h2>
             <div className="row">
                 {
                     rooms.length > 0 && rooms.map((room, id) => (

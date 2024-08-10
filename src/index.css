@@ -152,6 +152,7 @@ legend{
   border: 1px solid rgb(220, 220, 220);
   padding: 20px;
   border-radius: 10px;
+  width: 100%;
 }
 .profile-container{
   margin-top: 50px
@@ -163,6 +164,12 @@ legend{
   border-radius: 20px;
   cursor: pointer;
   margin-top: 15px;
+}
+.editbox{
+  margin-bottom: 10px;
+}
+.editbox-title{
+  border-bottom: 1px solid green;
 }
 .active-nav{
   border: 2px solid black !important
@@ -249,9 +256,7 @@ legend{
   color:rgb(29, 166, 201);
   margin-top: 25px;
 }
-.footer .site-link{
-  margin-bottom: 50px;
-}
+
 
 .review-img{
   width: 70px;

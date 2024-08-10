@@ -38,7 +38,7 @@ const ReviewHistory = () => {
 
     return (
         <>
-           <h2>Your reviews</h2>
+           <h2 className="text-success">Your reviews</h2>
             <div>
                 {
                     user && user.review.map((review) => (

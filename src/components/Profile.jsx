@@ -104,7 +104,7 @@ const Profile = () => {
 
     return (
         <div className="container profile-container main mb-5">
-            <div className="row">
+            <div className="row d-flex justify-content-center align-items-center">
                 <div className="col-md-4">
                     <div className="profile-bar">
                         <div className="profile-image">
@@ -168,8 +168,8 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-8">
-                    <div className="profile-edit-bar">
+                <div className="col-md-8 d-flex justify-content-center align-items-center">
+                    <div className="profile-edit-bar shadow-sm">
                         {nav.profile && <ProfileInfo />}
                         {nav.active_booked && <ActiveBooked />}
                         {nav.booked_history && <BookedHistory />}
