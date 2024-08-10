@@ -1,11 +1,9 @@
-import React from 'react';
-
 const Footer = () => {
     return (
-        <>
+        <footer className="footer">
+            <div className="container">
             <hr />
-            <div className="container footer">
-                <div className="row">
+                <div className="row site-link">
                     <div className="col-md-3">
                         <h5>Top Destinations</h5>
                         <ul>
@@ -43,7 +41,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </footer>
     );
 };
 

@@ -3,6 +3,7 @@ import api from '../utility/api';
 import { Link, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Empty from './Empty';
+import '../assets/css/hotel_list.css';
 
 const HotelListByDistrict = () => {
     const [hotelDistrict, setHotelDistrict] = useState([]);
@@ -57,7 +58,7 @@ const HotelListByDistrict = () => {
                             <p>{hotel.distance}</p>
                         </div>
                         <div>
-                            <Link to={`/hotel/${slug}/${hotel.slug}/`} className="btn btn-outline-info w-100">Visit</Link>
+                            <Link to={`/hotel/${slug}/${hotel.slug}/`} className="btn w-50 hotel-btn">See Details <i className="bi bi-chevron-double-right"></i></Link>
                         </div>
                     </div>
                 </div>
@@ -72,19 +73,19 @@ const HotelListByDistrict = () => {
                 <meta name="keywords" content="hotel-booking, bangaldesh hotel tourist, hotel book" />
             </Helmet>
             <div className="row">
-                <div className="col-md-4">
+                <div className="col-md-3">
                     {
                         districts && districts.map((district) => (
                             <div key={district.id}>
-                                <Link to={`/hotels/${district.slug}`} className="d-flex justify-content-between district-nav" id={slug == district.slug?'district-nav-active':''}>
+                                <Link to={`/hotels/${district.slug}`} className="d-flex justify-content-between district-nav shadow" id={slug == district.slug?'district-nav-active':''}>
                                     {district.name.toUpperCase()}
-                                    <i className="bi bi-arrow-right-circle"></i>
+                                    <i className="bi bi-chevron-right"></i>
                                 </Link>
                             </div>
                         ))
                     }
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-9">
                     {hotelDistrict.length > 0?hotelsElement:<Empty/>}
                 </div>
             </div>

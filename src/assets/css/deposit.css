@@ -1,0 +1,45 @@
+.deposit-box {
+    padding: 20px;
+    background: linear-gradient(to right, #5c5a5a, #373333);
+    border-radius: 5px;
+}
+
+.deposit-box .deposit-input {
+    background-color: gray;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.deposit-box input {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: white;
+    padding: 5px;
+}
+
+.deposit-box input:focus {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: white;
+}
+.deposit-title{
+    color:#dbcccc;
+}
+.deposit-submit{
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+.deposit-submit:hover{
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+.deposit-box input::-webkit-inner-spin-button,
+.deposit-box input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.deposit-box input {
+    -moz-appearance: textfield;
+}

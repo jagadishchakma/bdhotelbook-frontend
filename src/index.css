@@ -6,7 +6,6 @@
   display: block !important;
 }
 fieldset{
-  border: 1px solid rgb(171, 169, 169);
   padding: 20px
 }
 legend{
@@ -36,7 +35,7 @@ legend{
   padding: 5px;
 }
 .hotel-card{
-    border-radius: 30px;
+    border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 40px;
@@ -202,18 +201,26 @@ legend{
   cursor: pointer;
   color: white
 }
+.nav-link{
+  color: black;
+}
 
 .district-nav{
   width: 200px;
-  border: 1px solid gray;
-  border-radius: 10px;
   padding: 10px;
   text-decoration: none;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: black;
+  border: 1px solid green;
+  border-radius: 5px;
 }
 #district-nav-active{
-  border: 2px solid gray;
   color: black;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+.district-nav:hover{
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white
 }
 .no-results{
   width: 200px;
@@ -221,8 +228,16 @@ legend{
   color: #c08989;
   margin: 20px;
 }
+.empty-box{
+  min-height: 500px;
+}
 .main{
   min-height: 500px;
+}
+
+.footer{
+  margin-top: 100px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
 }
 .footer ul{
   list-style-type: none;
@@ -231,7 +246,11 @@ legend{
   font-family:Georgia, 'Times New Roman', Times, serif
 }
 .footer ul li{
-  color:rgb(29, 166, 201)
+  color:rgb(29, 166, 201);
+  margin-top: 25px;
+}
+.footer .site-link{
+  margin-bottom: 50px;
 }
 
 .review-img{
@@ -275,4 +294,14 @@ legend{
   font-weight: bold;
   font-size: 40px;
   background-color: white;
+}
+.auth_access_terms{
+  margin-top: 20px;
+  text-align: center;
+}
+.auth_access_terms a{
+  color: #0d7190;
+}
+.form-floating>label{
+  left: 10px;
 }

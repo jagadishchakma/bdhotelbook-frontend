@@ -21,11 +21,11 @@ const RegistrationForm = () => {
     const [message, setMessage] = useState('');
 
     //redirect authenticated user
-    const { user,finished } = useContext(AuthContext);
-    if(finished){
-        if(user) window.location.href = '/account/profile';
+    const { user, finished } = useContext(AuthContext);
+    if (finished) {
+        if (user) window.location.href = '/account/profile';
     }
-    
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -115,7 +115,7 @@ const RegistrationForm = () => {
                     }
                     setMessage('Registration failed for something went wrong! please try again');
                 });
-        }else{
+        } else {
             setLoading(false);
         }
     };
@@ -125,51 +125,55 @@ const RegistrationForm = () => {
 
             {message && <div className="alert alert-success formcontrol mt-3" role="alert"> <p><i class="bi bi-check-circle-fill"></i> {message} </p> </div>}
 
-            <form onSubmit={handleSubmit} className="formcontrol">
+            <form onSubmit={handleSubmit} className="formcontrol shadow d-flex justify-content-center align-items-center">
                 <fieldset>
                     <legend>Registration Form</legend>
-                    <div className="form-floating mb-3">
-                        <input type="text" name="username" className="form-control" id="username" value={formData.username} onChange={handleChange} placeholder='' />
-                        <label htmlFor="username">Username</label>
-                        {errors.username && <span className="invalid-feedback">{errors.username}</span>}
-                    </div>
+                    <div className="row">
+                        <div className="form-floating mb-5 col-md-6">
+                            <input type="text" name="username" className="form-control" id="username" value={formData.username} onChange={handleChange} placeholder='' />
+                            <label htmlFor="username">Username</label>
+                            {errors.username && <span className="invalid-feedback">{errors.username}</span>}
+                        </div>
 
-                    <div className="form-floating mb-3">
-                        <input type="text" name="first_name" className="form-control" id="first_name" value={formData.first_name} onChange={handleChange} placeholder='' />
-                        <label htmlFor="first_name">First Name</label>
-                        {errors.first_name && <span className="invalid-feedback">{errors.first_name}</span>}
-                    </div>
+                        <div className="form-floating mb-5 col-md-6">
+                            <input type="email" name="email" className="form-control" id="email" value={formData.email} onChange={handleChange} placeholder='' />
+                            <label htmlFor="email">Email</label>
+                            {errors.email && <span className="invalid-feedback">{errors.email}</span>}
+                        </div>
 
-                    <div className="form-floating mb-3">
-                        <input type="text" name="last_name" className="form-control" id="last_name" value={formData.last_name} onChange={handleChange} placeholder='' />
-                        <label htmlFor="last_name">Last Name</label>
-                        {errors.last_name && <span className="invalid-feedback">{errors.last_name}</span>}
-                    </div>
+                        <div className="form-floating mb-5 col-md-6">
+                            <input type="text" name="first_name" className="form-control" id="first_name" value={formData.first_name} onChange={handleChange} placeholder='' />
+                            <label htmlFor="first_name">First Name</label>
+                            {errors.first_name && <span className="invalid-feedback">{errors.first_name}</span>}
+                        </div>
 
-                    <div className="form-floating mb-3">
-                        <input type="email" name="email" className="form-control" id="email" value={formData.email} onChange={handleChange} placeholder='' />
-                        <label htmlFor="email">Email</label>
-                        {errors.email && <span className="invalid-feedback">{errors.email}</span>}
-                    </div>
+                        <div className="form-floating mb-5 col-md-6">
+                            <input type="text" name="last_name" className="form-control" id="last_name" value={formData.last_name} onChange={handleChange} placeholder='' />
+                            <label htmlFor="last_name">Last Name</label>
+                            {errors.last_name && <span className="invalid-feedback">{errors.last_name}</span>}
+                        </div>
 
-                    <div className="form-floating mb-3">
-                        <input type={togglePass1 ? "text" : "password"} name="password" className="form-control" id="password" value={formData.password} onChange={handleChange} placeholder='' />
-                        <i className={togglePass1 ? "bi bi-eye" : "bi bi-eye-slash"} id="togglePassword" onClick={handleTogglePass1}></i>
-                        <label htmlFor="password">Password</label>
-                        {errors.password && <span className="invalid-feedback">{errors.password}</span>}
-                    </div>
+                        
 
-                    <div className="form-floating mb-3">
-                        <input type={togglePass2 ? "text" : "password"} name="confirm_password" className="form-control" id="confirm_password" value={formData.confirm_password} onChange={handleChange} placeholder='' />
-                        <i className={togglePass2 ? "bi bi-eye" : "bi bi-eye-slash"} id="togglePassword" onClick={handleTogglePass2}></i>
-                        <label htmlFor="confirm_password">Confirm Password</label>
-                        {errors.confirm_password && <span className="invalid-feedback">{errors.confirm_password}</span>}
+                        <div className="form-floating mb-5 col-md-6">
+                            <input type={togglePass1 ? "text" : "password"} name="password" className="form-control" id="password" value={formData.password} onChange={handleChange} placeholder='' />
+                            <i className={togglePass1 ? "bi bi-eye" : "bi bi-eye-slash"} id="togglePassword" onClick={handleTogglePass1}></i>
+                            <label htmlFor="password">Password</label>
+                            {errors.password && <span className="invalid-feedback">{errors.password}</span>}
+                        </div>
+
+                        <div className="form-floating mb-5 col-md-6">
+                            <input type={togglePass2 ? "text" : "password"} name="confirm_password" className="form-control" id="confirm_password" value={formData.confirm_password} onChange={handleChange} placeholder='' />
+                            <i className={togglePass2 ? "bi bi-eye" : "bi bi-eye-slash"} id="togglePassword" onClick={handleTogglePass2}></i>
+                            <label htmlFor="confirm_password">Confirm Password</label>
+                            {errors.confirm_password && <span className="invalid-feedback">{errors.confirm_password}</span>}
+                        </div>
                     </div>
                     <div>
                         {loading ? <button class="btn btn-primary" type="button" disabled>
                             <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
                             <span role="status">Loading...</span>
-                        </button>:<button type="submit" className="btn btn-success">Submit</button>}
+                        </button> : <button type="submit" className="btn btn-success w-25">Submit</button>}
                     </div>
                 </fieldset>
             </form>
