@@ -98,7 +98,7 @@ const HotelDetails = () => {
                 <ul>
                     {
                         hotel && hotel.advantage.map((item, index) => (
-                            <li>{item.name}</li>
+                            <li key={index}>{item.name}</li>
                         ))
                     }
                 </ul>

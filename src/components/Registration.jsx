@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import api from '../utility/api';
 import { AuthContext } from '../utility/AuthContext';
+import { Link } from 'react-router-dom';
 
 const RegistrationForm = () => {
     const [togglePass1, setTogglePass1] = useState(false)
@@ -127,7 +128,7 @@ const RegistrationForm = () => {
 
             <form onSubmit={handleSubmit} className="formcontrol shadow d-flex justify-content-center align-items-center">
                 <fieldset>
-                    <legend>Registration Form</legend>
+                    <legend>Please complete registrartion, before access into hotel.</legend>
                     <div className="row">
                         <div className="form-floating mb-5 col-md-6">
                             <input type="text" name="username" className="form-control" id="username" value={formData.username} onChange={handleChange} placeholder='' />
@@ -173,8 +174,10 @@ const RegistrationForm = () => {
                         {loading ? <button class="btn btn-primary" type="button" disabled>
                             <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
                             <span role="status">Loading...</span>
-                        </button> : <button type="submit" className="btn btn-success w-25">Submit</button>}
+                        </button> : <button type="submit" className="btn btn-success w-100">Submit</button>}
+                        <p className="text-center">Already have an account? <Link to="/account/login">LOG IN</Link></p>
                     </div>
+
                 </fieldset>
             </form>
         </div>

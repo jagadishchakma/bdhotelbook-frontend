@@ -25,11 +25,11 @@ const BookedHistory = () => {
     return (
         <>
             <h2 className="text-success">Room Booked History </h2>
-            <div className="row">
+            <div className="row mt-5">
                 {
                     rooms.length > 0 && rooms.map((room, id) => (
                         room[0] && (
-                            <div className="col-md-4" key={id}>
+                            <div className="col-md-6" key={id}>
                                 <div className="card h-100">
                                     <img src={room[0].room_image[0].image} className="card-img-top" alt={room[0].room_name} width="100%" height="200px" />
                                     <div className="card-body">

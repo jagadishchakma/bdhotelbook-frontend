@@ -8,6 +8,8 @@ import HotelListByDistrict from './components/HotelListByDistrict'
 import HotelDetails from './components/HotelDetails'
 import Profile from './components/Profile'
 import Deposit from './components/Deposit'
+import Contact from './components/Contact'
+import About from './components/About'
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
       <Header/>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="/account/register" element={<Registration />} />
           <Route path="/account/login" element={<Login />} />
           <Route path="/account/profile" element={<Profile/>} />

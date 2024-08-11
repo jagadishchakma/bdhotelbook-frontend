@@ -1,0 +1,79 @@
+.desti-headline{
+    position: relative;
+    margin-bottom: 100px;
+}
+.desti-headline .line-box {
+    position: relative;
+    height: 5px;
+    width: 205px;
+    margin: auto;
+    margin-top: -5px;
+}
+
+.desti-headline .first{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #e2a202;
+    left: 0;
+    top: -2px;
+    z-index: 100;
+}
+.desti-headline .third{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #e2a202;
+    right: 0;
+    top: -2px;
+    z-index: 100;
+}
+.desti-headline .second{
+    position: absolute;
+    width: 205px;
+    height: 2px;
+    background-color:#e2a202;
+}
+
+.destination{
+    margin-bottom: 100px;
+}
+ul{
+    list-style-type: none;
+}
+.services{
+    background: linear-gradient(90deg, #ffffff, #e4f8ef);
+    border-radius: 10px;
+}
+.background{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 100px;
+    background: linear-gradient(45deg, #4194b2, transparent);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    position: relative;
+}
+.background img{
+    width: 100%;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+.background-text{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.background-text div{
+    width: 40%;
+    padding: 40px;
+}
+.background-text .btn{
+    border-radius: 20px;
+    padding: 5px 35px;
+    margin-top: 50px;
+}

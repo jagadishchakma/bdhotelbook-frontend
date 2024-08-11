@@ -3,6 +3,10 @@ import { Helmet } from 'react-helmet';
 import api from '../utility/api';
 import { Link } from 'react-router-dom';
 import Loading from './Loading';
+import FAQ from './home/FAQ';
+import '../assets/css/home.css';
+import Service from './home/Service';
+import Background from './home/Background';
 
 const Home = () => {
     const [district, setDistrict] = useState([]);
@@ -38,9 +42,30 @@ const Home = () => {
 
             {
                 loading ? <Loading /> : (
-                    <div className="row">
-                        {districts}
-                    </div>
+                    <>
+                        <div className="home-background">
+                            <Background/>
+                        </div>
+                        <div className="destination">
+                            <div className="desti-headline">
+                                <h1 className="text-center">Find Your Destinations</h1>
+                                <div className="line-box">
+                                    <span className="first"></span>
+                                    <span className="second"></span>
+                                    <span className="third"></span>
+                                </div>
+                            </div>
+                            <div className="row">
+                                {districts}
+                            </div>
+                        </div>
+                        <div className="services">
+                            <Service/>
+                        </div>
+                        <div className="faq">
+                            <FAQ />
+                        </div>
+                    </>
                 )
             }
 

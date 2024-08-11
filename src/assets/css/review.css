@@ -13,7 +13,8 @@
     margin-right: auto;
 }
 .review-card .card-body{
-    background-color: #e5e5e5;
+    color: white;
+    background-color: #777777;
 }
 .review-form{
     width: 500px;

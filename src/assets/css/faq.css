@@ -1,0 +1,37 @@
+.faq-headline{
+    position: relative;
+    margin-bottom: 100px;
+}
+.faq-headline .line-box {
+    position: relative;
+    height: 5px;
+    width: 305px;
+    margin: auto;
+}
+
+.faq-headline .first{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #e2a202;
+    left: 0;
+    top: -2px;
+    z-index: 100;
+}
+.faq-headline .third{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #e2a202;
+    right: 0;
+    top: -2px;
+    z-index: 100;
+}
+.faq-headline .second{
+    position: absolute;
+    width: 305px;
+    height: 2px;
+    background-color:#e2a202;
+}

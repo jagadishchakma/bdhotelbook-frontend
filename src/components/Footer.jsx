@@ -2,7 +2,6 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="container">
-            <hr />
                 <div className="row site-link">
                     <div className="col-md-3">
                         <h5>Top Destinations</h5>

@@ -1,6 +1,13 @@
+.navbar{
+  background: linear-gradient(to bottom, #374dc3, #6475ce);
+}
+.navbar-brand,.nav-link{
+  color: white !important;
+}
 .formcontrol{
   width:50%;
-  margin:auto
+  margin:auto;
+  padding: 40px 20px;
 }
 .invalid-feedback{
   display: block !important;
@@ -9,8 +16,10 @@ fieldset{
   padding: 20px
 }
 legend{
-  width: 190px;
   float: none;
+  color: green;
+  font-weight: bold;
+  font-family: math;
 }
 #togglePassword{
   cursor: pointer;
@@ -90,7 +99,7 @@ legend{
   font-weight: bold;
 }
 .balance{
-  color: gray;
+  color: white;
 }
 .invalid-feedback{
   font-style: italic;
@@ -244,7 +253,8 @@ legend{
 
 .footer{
   margin-top: 100px;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: linear-gradient(to right, #d6c9c9, #bf997b);
+  padding: 40px 0;
 }
 .footer ul{
   list-style-type: none;
@@ -253,8 +263,9 @@ legend{
   font-family:Georgia, 'Times New Roman', Times, serif
 }
 .footer ul li{
-  color:rgb(29, 166, 201);
+  color:rgb(0, 0, 0);
   margin-top: 25px;
+  cursor: pointer;
 }
 
 
@@ -271,7 +282,7 @@ legend{
   left: 10px;
 }
 .reviews{
-  background-color: #e5e5e5;
+  background-color: #96894d;
   padding: 20px;
   border-radius: 15px;
 }
@@ -309,4 +320,17 @@ legend{
 }
 .form-floating>label{
   left: 10px;
+}
+.navbar-nav .nav-item{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-nav .active-nav-link{
+  height: 3px;
+  width: 30px;
+  background-color: #00b1ff;
+  position: relative;
+  bottom: 6px;
 }

@@ -38,8 +38,8 @@ const ReviewHistory = () => {
 
     return (
         <>
-           <h2 className="text-success">Your reviews</h2>
-            <div>
+           <h2 className="text-success ms-5">Your reviews</h2>
+            <div className="mt-5">
                 {
                     user && user.review.map((review) => (
                         <div className="card review-card" key={review.id}>

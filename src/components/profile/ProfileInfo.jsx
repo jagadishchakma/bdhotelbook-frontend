@@ -72,7 +72,7 @@ const ProfileInfo = () => {
             <div className="mt-5">
                 <div className="d-flex justify-content-between gap-2 editbox">
                     <h2 className="editbox-title">Basic Information</h2>
-                    <button className="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#basicInfoEdit">Edit</button>
+                    <button className="btn btn-success" data-bs-toggle="modal" data-bs-target="#basicInfoEdit">Edit</button>
                 </div>
                 <div className="row">
                     <div className="col-md-6">
@@ -96,7 +96,7 @@ const ProfileInfo = () => {
             <div className="mt-5">
                 <div className="d-flex justify-content-between gap-2 editbox">
                     <h2 className="editbox-title">Personal Information</h2>
-                    <button className="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#personalEditModal">Edit</button>
+                    <button className="btn btn-success" data-bs-toggle="modal" data-bs-target="#personalEditModal">Edit</button>
                 </div>
                 <div className="row">
                     <div className="col-md-6">

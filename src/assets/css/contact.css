@@ -1,0 +1,35 @@
+.contact-headline{
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+}
+.contact-headline .underslash{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 3px;
+    background-color: #13790f;
+}
+.contact-box .form-label{
+    font-weight: 600;
+}
+.contact-box .form-control{
+    border: 1px solid black;
+    border-radius: 2px;
+}
+.contact-box textarea{
+    height: 200px;
+}
+.contact-box input[type="submit"]{
+    padding: 6px 70px;
+    background: linear-gradient(to right, #127dae, #239ee0);
+    border: none;
+    color: white;
+}
+.contact-box input[type="submit"]:hover{
+    background: linear-gradient(to right, #239ee0, #127dae);
+}
+.contact-box iframe{
+    border: 0;
+    width: 100%;
+}
