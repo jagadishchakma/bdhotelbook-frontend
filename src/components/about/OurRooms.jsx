@@ -24,7 +24,7 @@ const OurRooms = () => {
                         <p className="about-text">
                             These websites provide a wide range of options including hotels, guesthouses, hostels and vacations rentals in various locations accross the world.
                         </p>
-                        <Link to="/" className="btn about-btn">CHECK AVAILABILITY</Link>
+                        <Link to="/" className="btn about-btn mb-5">CHECK AVAILABILITY</Link>
                     </div>
                     <div className="col-md-6">
                         <img src="https://cdn.pixabay.com/photo/2016/11/18/13/02/bed-1834327_1280.jpg" alt="bd hotel rooms" />

@@ -1,0 +1,100 @@
+/* for navbar-nav */
+@media only screen and (max-width: 991px) {
+    .navbar-nav{
+        justify-content: flex-start !important;
+    }
+    .navbar-nav .nav-item{
+        justify-content: flex-start;
+        margin-right: auto;
+        align-items: start;
+    }
+    .navbar .gap-4{
+        gap: 1px !important
+    }
+    .nav-right{
+        flex-direction: column;
+        gap: 5px;
+        justify-content: flex-start;
+        align-items: flex-start !important;
+    }
+    .nav-right a:last-child{
+        margin-left: 0 !important;
+    }
+}
+
+/* for background-image */
+@media only screen and (max-width: 991px) {
+    .background-text div{
+        width: 70%;
+    }
+    .background-text h1{
+        font-size: 15px;
+        margin-bottom: 5px !important;
+    }
+    .background-text p{
+        font-size: 10px;
+    }
+    .background-text a{
+        margin-top: 10px !important;
+    }
+}
+
+
+/* for destination */
+@media only screen and (max-width: 991px) {
+   .destination .district{
+    margin-bottom: 50px;
+   }
+   .destination img{
+    border-radius: 10px;
+   }
+}
+
+/* for faq */
+@media only screen and (max-width: 991px) {
+    .faq .accordion{
+        width: 100% !important;
+    }
+    .footer .col-md-3{
+        margin-bottom: 50px;
+    }
+    .district-category{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hotel-card{
+        margin: 10px;
+    }
+    .hotel-card .col-md-4{
+        padding: 4px
+    }
+    #detail-pic{
+        margin-top: 50px;
+    }
+ }
+
+
+/* for profile */
+@media only screen and (max-width: 991px) {
+    .profile-bar,.sub-profile{
+        width: 100%;
+    }
+    .profile-container > .row >.col-md-4{
+        margin-bottom: 100px;
+    }
+}
+/* for registration,login */
+@media only screen and (max-width: 991px) {
+    .formcontrol{
+        width: 100%;
+    }
+    .login{
+        width: 100%;
+    }
+    .contact-box .col-md-8{
+        margin-bottom: 50px;
+    }
+}
+

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { AuthContext } from '../utility/AuthContext';
 import { Link, useLocation } from 'react-router-dom';
-
+import logo from '../../logo.png';
 
 const Header = () => {
     const { user, logout, finished } = useContext(AuthContext);
@@ -14,7 +14,7 @@ const Header = () => {
         <>
             <nav className="navbar navbar-expand-lg sticky-top">
                 <div className="container">
-                    <Link className="navbar-brand" to="/">BDHOTELBOOK</Link>
+                    <Link className="navbar-brand" to="/"><img src={logo} alt="BDHOTELBOOK" width="50px"/></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -40,7 +40,7 @@ const Header = () => {
 
                             </li>
                         </ul>
-                        <div className="d-flex align-items-center">
+                        <div className="d-flex align-items-center nav-right">
                             {user && (
                                 <>
                                     <span className="me-5 balance">Balance: {user.profile.balance}.00৳</span>

@@ -73,7 +73,8 @@ const HotelListByDistrict = () => {
                 <meta name="keywords" content="hotel-booking, bangaldesh hotel tourist, hotel book" />
             </Helmet>
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3 district-category">
+                    <h3 className="district-title"> Our Hotel Districts</h3>
                     {
                         districts && districts.map((district) => (
                             <div key={district.id}>

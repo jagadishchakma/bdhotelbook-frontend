@@ -62,13 +62,13 @@ const HotelDetails = () => {
                         {
                             hotel && hotel.images.length < 6 ? (
                                 hotel.images.slice(1).map((item) => (
-                                    <div className="col-md-6" key={item.id}>
+                                    <div className="col-md-6 col-6" key={item.id}>
                                         <img src={item.image} alt={item.name} width="100%" />
                                     </div>
                                 ))
                             ) : (
                                 hotel && hotel.images.slice(1, 5).map((item) => (
-                                    <div className="col-md-6" key={item.id}>
+                                    <div className="col-md-6 col-6" key={item.id}>
                                         <img src={item.image} alt={item.name} width="100%" />
                                     </div>
                                 ))
