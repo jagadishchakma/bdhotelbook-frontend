@@ -1,11 +1,11 @@
 .deposit-box {
     padding: 20px;
-    background: linear-gradient(to right, #5c5a5a, #373333);
+    background: linear-gradient(to bottom, #374dc3, #6475ce);
     border-radius: 5px;
 }
 
 .deposit-box .deposit-input {
-    background-color: gray;
+    background-color: white;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
@@ -15,7 +15,7 @@
     border: none;
     outline: none;
     background-color: inherit;
-    color: white;
+    color: black;
     padding: 5px;
 }
 
@@ -23,16 +23,20 @@
     border: none;
     outline: none;
     background-color: inherit;
-    color: white;
+    color: black;
 }
 .deposit-title{
     color:#dbcccc;
 }
 .deposit-submit{
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(to right, #237c5f, #41ad5e);
+    color: white;
+    border: none;
 }
 .deposit-submit:hover{
-    background: linear-gradient(to right, #feb47b, #ff7e5f);
+    background: linear-gradient(to right, #41ad5e, #237c5f);
+    color: white;
+    border: none;
 }
 
 .deposit-box input::-webkit-inner-spin-button,

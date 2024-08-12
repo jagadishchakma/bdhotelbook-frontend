@@ -59,7 +59,7 @@ const Home = () => {
                                 {districts}
                             </div>
                         </div>
-                        <div className="services">
+                        <div className="service">
                             <Service/>
                         </div>
                         <div className="faq">

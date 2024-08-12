@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 const OurRooms = () => {
     return (
         <div>
-            <h1 className="about-title text-center">Our Rooms</h1>
+            <div className="desti-headline">
+                <h1 className="text-center about-title">Our Rooms</h1>
+                <div className="line-box">
+                    <span className="first"></span>
+                    <span className="second"></span>
+                    <span className="third"></span>
+                </div>
+            </div>
             <div className="our-rooms">
                 <div className="row d-flex justify-content-center align-items-center mb-5">
                     <div className="col-md-6">

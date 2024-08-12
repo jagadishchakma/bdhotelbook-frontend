@@ -93,8 +93,33 @@
     .login{
         width: 100%;
     }
+    .login .col-md-5{
+        margin-bottom: 50px;
+    }
     .contact-box .col-md-8{
         margin-bottom: 50px;
     }
+
 }
 
+/* for review */
+@media only screen and (max-width: 991px) {
+    .reviews{
+        padding:5px;
+    }
+    .review-form{
+        width: 100%;
+        padding: 10px;
+    }
+    .review-card{
+        width: 100%;
+    }
+    .review-img{
+        width: 60px;
+        height: 70px;
+    }
+    .review-date{
+        font-size: 13px;
+    }
+
+}

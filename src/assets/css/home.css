@@ -1,6 +1,6 @@
 .desti-headline{
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .desti-headline .line-box {
     position: relative;
@@ -38,14 +38,22 @@
 }
 
 .destination{
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 ul{
     list-style-type: none;
 }
+.service{
+    margin-bottom: 200px;
+}
 .services{
     background: linear-gradient(90deg, #ffffff, #e4f8ef);
     border-radius: 10px;
+}
+.services li{
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
 }
 .background{
     width: 90%;

@@ -128,7 +128,7 @@ const RegistrationForm = () => {
 
             <form onSubmit={handleSubmit} className="formcontrol shadow d-flex justify-content-center align-items-center">
                 <fieldset>
-                    <legend>Please complete registrartion, before access into hotel.</legend>
+                    <legend>Registration</legend>
                     <div className="row">
                         <div className="form-floating mb-5 col-md-6">
                             <input type="text" name="username" className="form-control" id="username" value={formData.username} onChange={handleChange} placeholder='' />
@@ -170,12 +170,12 @@ const RegistrationForm = () => {
                             {errors.confirm_password && <span className="invalid-feedback">{errors.confirm_password}</span>}
                         </div>
                     </div>
-                    <div>
+                    <div className="d-flex flex-column justify-content-center align-items-center">
                         {loading ? <button class="btn btn-primary" type="button" disabled>
                             <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
                             <span role="status">Loading...</span>
                         </button> : <button type="submit" className="btn btn-success w-100">Submit</button>}
-                        <p className="text-center">Already have an account? <Link to="/account/login">LOG IN</Link></p>
+                        <p className="auth-success-terms text-center">Already have an account? <Link to="/account/login">LOG IN</Link></p>
                     </div>
 
                 </fieldset>

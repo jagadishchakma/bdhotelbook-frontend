@@ -108,7 +108,7 @@ const HotelDetails = () => {
                 {
                     hotel && hotel.rooms.map((room) => (
                         <div className="col-md-4" key={room.id}>
-                            <div className="card h-100">
+                            <div className="card h-100 shadow">
                                 <div className="card-header">
                                     <div id={`carouselExample${room.id}`} className="carousel slide">
                                         <div className="carousel-inner">
@@ -138,6 +138,7 @@ const HotelDetails = () => {
                                 </div>
                                 <div className="card-body">
                                     <h6>{room.room_name}</h6>
+                                    <p className="room_price"><span>TK. {room.room_price}</span> per night</p>
                                     <ul className="room-features">
                                         <li><i className="bi bi-slash-square"></i> Square: {room.room_sq}</li>
                                         <li><i className="bi bi-truck-flatbed"></i> Bed: {room.room_bed}</li>
@@ -148,8 +149,7 @@ const HotelDetails = () => {
 
                                 </div>
 
-                                <div className="card-footer text-muted">
-                                    <p className="room_price">Price: TK. {room.room_price} per night</p>
+                                <div className="card-footer">
                                     {
                                         user && user.profile.room_booked.map((user_room) => (
                                             user_room.room[0].slug == room.slug && room.room_booked ? bookedMatch = true : bookedMatch = false
@@ -158,11 +158,11 @@ const HotelDetails = () => {
                                     {
                                         bookedMatch ? (
                                             <>
-                                                <button className="btn btn-success" disabled>You Booked</button>
+                                                <button className="btn" disabled>You Booked</button>
                                             </>
                                         ) : user && room.room_booked ? (
                                             <>
-                                                <button className="btn btn-success" disabled>Unavailable</button>
+                                                <button className="btn" disabled>Unavailable</button>
                                             </>
                                         ) : user && user ? (
                                             <>
@@ -173,7 +173,7 @@ const HotelDetails = () => {
                                                             <span role="status">Loading...</span>
                                                         </>
                                                     ) : (
-                                                        <button className="btn btn-success" onClick={() => HotelBookingHandler(room.slug, room.room_price, room.id)}>Book Now</button>
+                                                        <button className="btn" onClick={() => HotelBookingHandler(room.slug, room.room_price, room.id)}>Book Now</button>
                                                     )
                                                 }
                                             </>

@@ -2,24 +2,22 @@
     margin-top: 100px;
     margin-bottom: 50px;
 }
-.review-card{
-    background-color: white;
-    margin-top: 20px;
-}
+
 .review-card{
     border: none;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 50%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 15px;
+    
 }
-.review-card .card-body{
-    color: white;
-    background-color: #777777;
+.review-card .card-header, .review-card .card-footer{
+    background-color: inherit;
 }
 .review-form{
     width: 500px;
     margin: auto;
-    background-color: white;
+    background: linear-gradient(45deg, #74b5da, #73abe6);
     margin-top: 50PX;
     margin-bottom: 50PX;
     padding: 20px;
@@ -39,4 +37,17 @@
 .reviewer-info p{
     margin: 0;
     padding: 0;
+}
+.review-holder .card-title{
+    color: #374dc3;
+    font-size: 15px;
+}
+.review-holder .card-footer button{
+    color: gray;
+    font-size: 15px;
+    padding: 3px;
+}
+.review-holder .card-body{
+    font-size: 14px;
+    color: black;
 }

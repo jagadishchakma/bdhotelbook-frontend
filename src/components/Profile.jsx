@@ -26,10 +26,10 @@ const Profile = () => {
     })
 
     //redirect unauthenticated user
-    if(!localStorage.getItem('token')) window.location.href="/account/login"
+    if (!localStorage.getItem('token')) window.location.href = "/account/login"
     const { user, logout, setReloadUser, reloadUser, finished } = useContext(AuthContext);
-    if(finished){
-        if(user==null) window.location.href = '/account/login';
+    if (finished) {
+        if (user == null) window.location.href = '/account/login';
     }
 
 
@@ -59,8 +59,8 @@ const Profile = () => {
 
         try {
             authapi.post('account/pass_change/', { old_pass: oldPassword, new_pass: newPassword })
-             logout()
-             setLoading(false)
+            logout()
+            setLoading(false)
         } catch (error) {
             setErrors({ old_pass: false, new_pass: 'Please provide a strong password', confirm_pass: false })
             setLoading(false)
@@ -104,7 +104,7 @@ const Profile = () => {
 
     return (
         <div className="container profile-container main mb-5">
-            <div className="row d-flex justify-content-center align-items-center">
+            <div className="row d-flex justify-content-center">
                 <div className="col-md-4">
                     <div className="profile-bar">
                         <div className="profile-image">
@@ -168,13 +168,13 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-8 d-flex justify-content-center align-items-center">
-                    <div className="profile-edit-bar shadow-sm">
-                        {nav.profile && <ProfileInfo />}
-                        {nav.active_booked && <ActiveBooked />}
-                        {nav.booked_history && <BookedHistory />}
-                        {nav.review && <ReviewHisotry />}
-                    </div>
+                <div className="col-md-8">
+
+                    {nav.profile && <ProfileInfo />}
+                    {nav.active_booked && <ActiveBooked />}
+                    {nav.booked_history && <BookedHistory />}
+                    {nav.review && <ReviewHisotry />}
+
                 </div>
             </div>
             <div className="all-modal">

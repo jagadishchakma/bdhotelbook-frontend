@@ -67,7 +67,7 @@ const ProfileInfo = () => {
         }
     }
     return (
-        <>
+        <div className="profile-edit-bar shadow-sm">
             <h2 className="text-success"><span >Welcome,</span> {user && user.first_name} {user && user.last_name}</h2>
             <div className="mt-5">
                 <div className="d-flex justify-content-between gap-2 editbox">
@@ -345,7 +345,7 @@ const ProfileInfo = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

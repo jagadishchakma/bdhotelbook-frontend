@@ -19,7 +19,9 @@ legend{
   float: none;
   color: green;
   font-weight: bold;
-  font-family: math;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  font-size: 30px;
 }
 #togglePassword{
   cursor: pointer;
@@ -73,9 +75,17 @@ legend{
   margin-top: 100px
 }
 .room_price{
-  color: #790000;
+  color: black;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-style: italic;
+  font-weight: bold;
+}
+.rooms .card-footer button{
+  background: linear-gradient(to bottom, #374dc3, #6475ce);
+  color: white
+}
+.rooms .card-footer button:hover{
+  background: linear-gradient(to bottom, #6475ce, #374dc3);
+  color: white
 }
 .title{
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -124,7 +134,7 @@ legend{
 }
 .rating-star li{
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
 }
 .rating-star li:first-child{
@@ -165,6 +175,9 @@ legend{
   border: 1px solid rgb(220, 220, 220);
   padding: 20px;
   border-radius: 10px;
+  width: 100%;
+}
+.profile-edit-bar .review-card{
   width: 100%;
 }
 .profile-container{
@@ -257,7 +270,7 @@ legend{
 
 .footer{
   margin-top: 100px;
-  background: linear-gradient(to right, #d6c9c9, #bf997b);
+  background: linear-gradient(to bottom, #374dc3, #6475ce);
   padding: 40px 0;
 }
 .footer ul{
@@ -267,9 +280,12 @@ legend{
   font-family:Georgia, 'Times New Roman', Times, serif
 }
 .footer ul li{
-  color:rgb(0, 0, 0);
+  color:#fff;
   margin-top: 25px;
   cursor: pointer;
+}
+.footer h5{
+  color: #fff;
 }
 
 
@@ -280,17 +296,18 @@ legend{
 }
 .review-date{
   color: gray;
-  font-style: italic;
+  font-size: 15px !important;
 }
 #birth-date .form-floating>label{
   left: 10px;
 }
 .reviews{
-  background-color: #96894d;
   padding: 20px;
   border-radius: 15px;
 }
-
+.reviews .card{
+  width: 50%;
+}
 .hotel-images,.hotel-image{
   cursor: pointer;
 }
@@ -315,11 +332,12 @@ legend{
   font-size: 40px;
   background-color: white;
 }
-.auth_access_terms{
+.auth-success-terms{
   margin-top: 20px;
   text-align: center;
+  font-weight: bold;
 }
-.auth_access_terms a{
+.auth-success-terms a{
   color: #0d7190;
 }
 .form-floating>label{
@@ -337,4 +355,26 @@ legend{
   background-color: #00b1ff;
   position: relative;
   bottom: 6px;
+}
+.navbar-brand{
+  margin-right: 50px;
+}
+.rooms .card{
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.rooms .card-header{
+  padding: 0;
+  border: none;
+  background: none;
+}
+.rooms .card-body{
+  border:none;
+  background: none;
+}
+.rooms .card-footer{
+  border: none;
+  background: none;
 }

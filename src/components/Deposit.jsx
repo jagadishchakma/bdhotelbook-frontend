@@ -66,7 +66,7 @@ const Deposit = () => {
                             {loading ? <button className="btn btn-primary mt-4" type="button" disabled>
                                 <span className="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
                                 <span role="status">Loading...</span>
-                            </button> : <button type="submit" className="btn w-25 deposit-submit">Submit</button>}
+                            </button> : <button type="submit" className="btn w-25 deposit-submit shadow">Submit</button>}
                         </div>
                     </form>
 
