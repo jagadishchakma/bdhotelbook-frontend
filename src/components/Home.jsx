@@ -25,13 +25,14 @@ const Home = () => {
             <div className="col-md-3" key={item.id} >
                 <Link to={`hotels/${item.slug}`}>
                     <div className="district">
-                        <img src={`https://hotel-booking-backend-vvsl.onrender.com/${item.image}`} alt="" width="100%" />
+                        <img src={`https://bdhotelapi.tfbfoundation.org${item.image}`} alt="" width="100%" />
                         <span>{item.name}</span>
                     </div>
                 </Link>
             </div>
         )
     });
+
     return (
         <div className="container mt-5 main">
             <Helmet>

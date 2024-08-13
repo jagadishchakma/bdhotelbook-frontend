@@ -102,7 +102,9 @@ legend{
   border-bottom-right-radius: 20px;
 }
 
-
+.overview ul{
+  list-style-type: circle;
+}
 
 .district-title{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
