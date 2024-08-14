@@ -1,10 +1,10 @@
 .hotel-btn{
-    background: linear-gradient(to right, #11805b, #0f9e48);
+    background: linear-gradient(to bottom, #374dc3, #6475ce);
     color: white;
     transition: 0.3s ease;
 }
 .hotel-btn:hover{
-    background: linear-gradient(to left, #0e986a, #5db47f);
+    background: linear-gradient(to bottom, #6475ce, #374dc3);
     color: white;
     
 }

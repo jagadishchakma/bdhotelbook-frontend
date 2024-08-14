@@ -24,8 +24,11 @@
 
 /* for background-image */
 @media only screen and (max-width: 991px) {
+    .background img{
+        height: 250px;
+    }
     .background-text div{
-        width: 70%;
+        width: 70% !important;
     }
     .background-text h1{
         font-size: 15px;
@@ -33,6 +36,7 @@
     }
     .background-text p{
         font-size: 10px;
+        font-weight: 600;
     }
     .background-text a{
         margin-top: 10px !important;
@@ -115,6 +119,9 @@
     .contact-box .col-md-8{
         margin-bottom: 50px;
     }
+    .registration{
+        width: 100%;
+    }
 
 }
 
@@ -138,4 +145,10 @@
         font-size: 13px;
     }
 
+    .service .container{
+        padding: 0;
+    }
+    .services ul{
+        padding: 0;
+    }
 }

@@ -22,14 +22,19 @@
 }
 .contact-box input[type="submit"]{
     padding: 6px 70px;
-    background: linear-gradient(to right, #127dae, #239ee0);
+    background: linear-gradient(to right, #374dc3, #6475ce);
     border: none;
     color: white;
+    border-radius: 5px;
 }
 .contact-box input[type="submit"]:hover{
-    background: linear-gradient(to right, #239ee0, #127dae);
+    background: linear-gradient(to right, #6475ce, #374dc3);
 }
 .contact-box iframe{
     border: 0;
     width: 100%;
+}
+.btn-outline-light:hover{
+    background-color: #0d6efd;
+    color: white;
 }

@@ -11,7 +11,12 @@
     width: 100%;
 }
 .login-btn{
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(to bottom, #374dc3, #6475ce);
+    color: white;
+}
+.login-btn:hover{
+    background: linear-gradient(to bottom, #6475ce, #374dc3);
+    color: white;
 }
 #togglePassword{
     margin-top: -35px !important;

@@ -15,7 +15,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: #e2a202;
+    background-color: #374dc3;
     left: 0;
     top: -2px;
     z-index: 100;
@@ -25,7 +25,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: #e2a202;
+    background-color: #374dc3;
     right: 0;
     top: -2px;
     z-index: 100;
@@ -34,7 +34,7 @@
     position: absolute;
     width: 205px;
     height: 2px;
-    background-color:#e2a202;
+    background-color:#374dc3;
 }
 
 .destination{

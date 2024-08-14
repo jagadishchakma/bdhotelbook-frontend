@@ -59,7 +59,7 @@ const Header = () => {
                             )}
                             {!user && (
                                 <>
-                                    <Link to="/account/register" className="btn btn-outline-info">Register</Link>
+                                    <Link to="/account/register" className="btn btn-outline-light">Register</Link>
                                     <Link to="/account/login" className="btn btn-primary ms-3">Login</Link>
                                 </>
                             )}

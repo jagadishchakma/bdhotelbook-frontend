@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../utility/AuthContext";
 import { authapi } from "../../utility/api";
 import { format } from 'date-fns';
+import NotFound from "./NotFound";
 
 
 
@@ -42,7 +43,7 @@ const ReviewHistory = () => {
         return formattedDate
     };
 
-    return (
+    const userReview = () => (
         <div className="profile-edit-bar shadow-sm">
             <h2 className="text-success ms-5">Your reviews</h2>
             <div className="mt-5">
@@ -110,6 +111,12 @@ const ReviewHistory = () => {
 
         </div>
     );
+
+    if(user && user.review.length > 0) {
+        return userReview();
+    }else{
+        return <NotFound/>
+    }
 };
 
 export default ReviewHistory;

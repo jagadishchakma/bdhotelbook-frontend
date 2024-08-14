@@ -4,11 +4,7 @@
 .navbar-brand,.nav-link{
   color: white !important;
 }
-.formcontrol{
-  width:50%;
-  margin:auto;
-  padding: 40px 20px;
-}
+
 .invalid-feedback{
   display: block !important;
 }
@@ -17,11 +13,31 @@ fieldset{
 }
 legend{
   float: none;
-  color: green;
+  color: #374dc3;
   font-weight: bold;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
   font-size: 30px;
+}
+.regi-btn{
+  background: linear-gradient(to bottom, #374dc3, #6475ce);
+  color: white;
+}
+.regi-btn:hover{
+  background: linear-gradient(to bottom, #6475ce, #374dc3);
+  color: white
+}
+.regi-submit-alert{
+  background-color: green;
+  color: white;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px !important;
+  display: flex;
+  align-items: center;
+}
+.regi-submit-alert p{
+  margin: 0;
 }
 #togglePassword{
   cursor: pointer;
@@ -72,7 +88,7 @@ legend{
   padding: 0;
 }
 .rooms{
-  margin-top: 100px
+  margin-top: 50px;
 }
 .room_price{
   color: black;
@@ -93,7 +109,7 @@ legend{
   margin-bottom: 40px;
 }
 .headline{
-  border: 2px solid green;
+  border: 2px solid #374dc3;
   width: 200px;
   margin-left: auto;
   margin-right: auto;
@@ -246,15 +262,15 @@ legend{
   text-decoration: none;
   margin-bottom: 20px;
   color: black;
-  border: 1px solid green;
+  border: 1px solid #374dc3;
   border-radius: 5px;
 }
 #district-nav-active{
-  color: black;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  background: linear-gradient(to bottom, #374dc3, #6475ce);
 }
 .district-nav:hover{
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: linear-gradient(to bottom, #6475ce, #374dc3);
   color: white
 }
 .no-results{
@@ -304,7 +320,6 @@ legend{
   left: 10px;
 }
 .reviews{
-  padding: 20px;
   border-radius: 15px;
 }
 .reviews .card{
@@ -338,6 +353,7 @@ legend{
   margin-top: 20px;
   text-align: center;
   font-weight: bold;
+  color:#6475ce;
 }
 .auth-success-terms a{
   color: #0d7190;
@@ -379,4 +395,19 @@ legend{
 .rooms .card-footer{
   border: none;
   background: none;
+}
+.navbar-toggler{
+  background-color: white;
+}
+.profile-container .text-success{
+  color: #374dc3 !important;
+}
+.profile-container .btn-success{
+  background: linear-gradient(to right, #374dc3, #6475ce);
+}
+.profile-container .btn-success:hover{
+  background: linear-gradient(to right, #6475ce, #374dc3);
+}
+.accordion-header button{
+  font-weight: 600;
 }
