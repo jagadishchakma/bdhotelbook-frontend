@@ -69,7 +69,7 @@ const ProfileInfo = () => {
     return (
         <div className="profile-edit-bar shadow-sm">
             <h2 className="text-success"><span >Welcome,</span> {user && user.first_name} {user && user.last_name}</h2>
-            <div className="mt-5">
+            <div className="mt-2">
                 <div className="d-flex justify-content-between gap-2 editbox">
                     <h2 className="editbox-title">Basic Information</h2>
                     <button className="btn btn-success" data-bs-toggle="modal" data-bs-target="#basicInfoEdit">Edit</button>

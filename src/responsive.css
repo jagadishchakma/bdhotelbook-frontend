@@ -43,6 +43,7 @@
     }
     .background{
         width: 100%;
+        margin-bottom: 50px;
     }
 
 }
@@ -64,6 +65,9 @@
 @media only screen and (max-width: 991px) {
    .destination .district{
     margin-bottom: 50px;
+   }
+   .destination .col-md-3:last-child .district{
+    margin-bottom: 0px;
    }
    .destination img{
     border-radius: 10px;
@@ -102,7 +106,7 @@
         width: 100%;
     }
     .profile-container > .row >.col-md-4{
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 }
 /* for registration,login */
@@ -138,8 +142,8 @@
         width: 100%;
     }
     .review-img{
-        width: 60px;
-        height: 70px;
+        width: 40px;
+        height: 50px;
     }
     .review-date{
         font-size: 13px;
@@ -150,5 +154,40 @@
     }
     .services ul{
         padding: 0;
+    }
+    .deposit-box{
+        width: 100% !important;
+    }
+    .editbox-title{
+        font-size:20px;
+    }
+    .profile-edit-bar h6{
+        margin: 0;
+    }
+    .destination, .service{
+         margin-bottom: 50px;
+    }
+    .review-card .card-header{
+        display: block !important;
+    }
+    .review-card .card-header .card-footer button{
+        margin-left: 4px !important;
+        padding: 2px;
+    }
+    .card-header .card-title{
+        font-weight: 600;
+    }
+    #comment-box{
+        width: 100%;
+    }
+    .card-footer .btn-outline-danger{
+        margin: 2px !important;
+    }
+    .login img, .registration img{
+        display: none;
+    }
+    .hotel-card .col-md-8{
+        padding: 4px !important;
+        padding-bottom: 8px !important;
     }
 }

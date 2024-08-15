@@ -32,7 +32,7 @@ const ActiveBooked = () => {
         return (
             <div className="profile-edit-bar shadow-sm">
                 <h2 className="text-success">Active Room Booked</h2>
-                <div className="row mt-5">
+                <div className="row mt-2">
                     {
                         rooms.length > 0 && rooms.map((room, id) => (
                             room[0].room_booked && (

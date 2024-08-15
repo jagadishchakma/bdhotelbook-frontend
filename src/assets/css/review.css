@@ -6,7 +6,7 @@
 .review-card{
     border: none;
     width: 50%;
-    margin: 40px auto;
+    margin: 20px auto;
     background-color: white;
     padding: 15px;
     
@@ -27,6 +27,8 @@
 
 .review-holder{
     padding-bottom: 50px;
+    max-height: 1000px;
+    overflow: auto;
 }
 .review-card .card-header{
     border: none;

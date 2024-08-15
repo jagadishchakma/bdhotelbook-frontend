@@ -169,7 +169,7 @@ const RegistrationForm = () => {
                                         {errors.password && <span className="invalid-feedback">{errors.password}</span>}
                                     </div>
 
-                                    <div className="form-floating mb-5 col-12">
+                                    <div className="form-floating mb-2 col-12">
                                         <input type={togglePass2 ? "text" : "password"} name="confirm_password" className="form-control" id="confirm_password" value={formData.confirm_password} onChange={handleChange} placeholder='' />
                                         <i className={togglePass2 ? "bi bi-eye" : "bi bi-eye-slash"} id="togglePassword" onClick={handleTogglePass2}></i>
                                         <label htmlFor="confirm_password">Confirm Password</label>

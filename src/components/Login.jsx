@@ -76,39 +76,42 @@ const LoginForm = () => {
                         {message.msg && !error && <div className={`alert alert-${message.color} mt-3 mb-3`} role="alert"> <i className={`bi ${message.icon}`}></i> {message.msg}  </div>}
                         <div className="card login-card shadow">
                             <div className="card-body">
-                                <form onSubmit={handleLogin}>
-                                    <div className="form-group">
-                                        <label htmlFor="username">Username</label>
-                                        <input
-                                            type="text"
-                                            id="username"
-                                            className="form-control shadow-sm"
-                                            value={username}
-                                            onChange={(e) => setUsername(e.target.value)}
-                                            required
-                                        />
-                                    </div>
-                                    <div className="form-group mt-3">
-                                        <label htmlFor="password">Password</label>
-                                        <input
-                                            type={togglePass1 ? "text" : "password"}
-                                            id="password"
-                                            className="form-control shadow-sm"
-                                            value={password}
-                                            onChange={(e) => setPassword(e.target.value)}
-                                            required
-                                        />
-                                        <i className={togglePass1 ? "bi bi-eye" : "bi bi-eye-slash"} id="togglePassword" onClick={handleTogglePass1}></i>
-                                    </div>
+                                <fieldset>
+                                    <legend>Login</legend>
+                                    <form onSubmit={handleLogin}>
+                                        <div className="form-group">
+                                            <label htmlFor="username">Username</label>
+                                            <input
+                                                type="text"
+                                                id="username"
+                                                className="form-control shadow-sm"
+                                                value={username}
+                                                onChange={(e) => setUsername(e.target.value)}
+                                                required
+                                            />
+                                        </div>
+                                        <div className="form-group mt-3">
+                                            <label htmlFor="password">Password</label>
+                                            <input
+                                                type={togglePass1 ? "text" : "password"}
+                                                id="password"
+                                                className="form-control shadow-sm"
+                                                value={password}
+                                                onChange={(e) => setPassword(e.target.value)}
+                                                required
+                                            />
+                                            <i className={togglePass1 ? "bi bi-eye" : "bi bi-eye-slash"} id="togglePassword" onClick={handleTogglePass1}></i>
+                                        </div>
 
-                                    <div className="d-flex flex-column justify-content-center align-items-center">
-                                        {loading ? <button class="btn btn-primary mt-3" type="button" disabled>
-                                            <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
-                                            <span role="status">Loading...</span>
-                                        </button> : <button type="submit" className="btn  mt-4 w-100 login-btn">Login</button>}
-                                        <p className="auth-success-terms">Don't have an account? <Link to="/account/register">Register Now</Link></p>
-                                    </div>
-                                </form>
+                                        <div className="d-flex flex-column justify-content-center align-items-center">
+                                            {loading ? <button class="btn btn-primary mt-3" type="button" disabled>
+                                                <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+                                                <span role="status">Loading...</span>
+                                            </button> : <button type="submit" className="btn  mt-4 w-100 login-btn">Submit</button>}
+                                            <p className="auth-success-terms">Don't have an account? <Link to="/account/register">Register Now</Link></p>
+                                        </div>
+                                    </form>
+                                </fieldset>
                             </div>
                         </div>
                     </div>

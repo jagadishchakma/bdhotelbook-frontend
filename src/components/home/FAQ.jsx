@@ -4,7 +4,7 @@ import '../../assets/css/faq.css';
 
 const FAQ = () => {
     return (
-        <div className="mt-5">
+        <div className="">
             <div className="faq-headline">
                 <h1 className="text-center">Frequently Asked and Questions</h1>
                 <div className="line-box">
