@@ -7,6 +7,7 @@ import FAQ from './home/FAQ';
 import '../assets/css/home.css';
 import Service from './home/Service';
 import Background from './home/Background';
+import { backend_link } from '../utility/utils';
 
 const Home = () => {
     const [district, setDistrict] = useState([]);
@@ -25,7 +26,7 @@ const Home = () => {
             <div className="col-md-3" key={item.id} >
                 <Link to={`hotels/${item.slug}`}>
                     <div className="district">
-                        <img src={`https://bdhotelapi.tfbfoundation.org${item.image}`} alt="" width="100%" />
+                        <img src={`${backend_link}${item.image}`} alt="" width="100%" />
                         <span>{item.name}</span>
                     </div>
                 </Link>
